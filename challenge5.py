@@ -22,8 +22,21 @@ def english_to_piglatin(word):
             finalWord += rearrangedWord[i].lower()
     return finalWord + 'ay'
 
-# Test suite
-print(english_to_piglatin("John"))
-print(english_to_piglatin("JoHn"))
-print(english_to_piglatin("JohNnY"))
-print(english_to_piglatin("a"))
+inputString = input("What do you want to convert to Piglatin? (No punctuation, numbers, symbols, etc.)")
+inputList = inputString.split()
+punctuationBool = True
+
+for word in inputList:
+  for letter in word:
+    if not letter.isalpha():
+      punctuationBool = False
+      break
+
+if not punctuationBool:
+  print("I said no punctuation, numbers, or symbols!!")
+else:
+  outputString = ''
+  for word in inputList:
+    outputString += english_to_piglatin(word)
+    outputString += ' '
+  print(outputString)
