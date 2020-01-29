@@ -26,3 +26,4 @@ def english_to_piglatin(word):
 print(english_to_piglatin("John"))
 print(english_to_piglatin("JoHn"))
 print(english_to_piglatin("JohNnY"))
+print(english_to_piglatin("a"))
