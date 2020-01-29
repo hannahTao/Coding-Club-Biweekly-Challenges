@@ -23,20 +23,23 @@ def english_to_piglatin(word):
     return finalWord + 'ay'
 
 inputString = input("What do you want to convert to Piglatin? (No punctuation, numbers, symbols, etc.)")
-inputList = inputString.split()
-punctuationBool = True
+inputList = inputString.split()                      # make list of words
+punctuationBool = True                               # initialize value
 
+# check to see if all letters in the string are part of the alphabet
 for word in inputList:
   for letter in word:
     if not letter.isalpha():
       punctuationBool = False
       break
 
-if not punctuationBool:
+# there is punctuation, numbers, or symbols in the string
+if not punctuationBool:                              
   print("I said no punctuation, numbers, or symbols!!")
-else:
+# all letters in the string are part of the alphabet
+else:                                                
   outputString = ''
   for word in inputList:
     outputString += english_to_piglatin(word)
-    outputString += ' '
+    outputString += ' '                              # add space between each word
   print(outputString)
