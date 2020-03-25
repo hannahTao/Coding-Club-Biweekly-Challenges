@@ -1,19 +1,6 @@
 import math
 print('What do you want to do with this calculator?')
 userInput = input('Type "add" "multiply" "divide" (input negative numbers in "add" to subtract). Or, type "more" to see more options: ')
-if userInput in ["add", "multiply", "divide"]:
-  numOfNumbers = int(input("How many numbers do you want to " + userInput + "?"))
-  for i in range(numOfNumbers):
-    if i == 0:
-      value = float(input("Input a number: "))
-    else:
-      if userInput == "add":
-        value += float(input("Input a number: "))
-      if userInput == "multiply":
-        value *= float(input("Input a number: "))
-      if userInput == "divide":
-        value /= float(input("Input a number: "))
-  print(str(value))
 if userInput == "more":
   print("You can type:")
   print('"degree/radian" to convert angle measures')
@@ -28,6 +15,19 @@ if userInput == "more":
   print('"gcd" to find gcd of integers x and y')
   print('"hypotenuse" to find hypotenuse of a right triangle with legs of length x and y')
   userInput = input("Choose one: ")
+if userInput in ["add", "multiply", "divide"]:
+  numOfNumbers = int(input("How many numbers do you want to " + userInput + "?"))
+  for i in range(numOfNumbers):
+    if i == 0:
+      value = float(input("Input a number: "))
+    else:
+      if userInput == "add":
+        value += float(input("Input a number: "))
+      if userInput == "multiply":
+        value *= float(input("Input a number: "))
+      if userInput == "divide":
+        value /= float(input("Input a number: "))
+  print(str(value))
 if userInput == "degree/radian":
   conversion = input('Type "radians" to convert degrees to radians and "degrees" to convert radians to degrees: ')
   angleMeasure = float(input("Angle measure: "))
