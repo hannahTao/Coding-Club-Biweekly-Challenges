@@ -19,7 +19,7 @@ def letterInUserNum(userNum):
   for char in userNum:
     if char == "a" or char == "b" or char == "c" or char == "d" or char == "f" or char == "g" or char == "h" or char == "j" or char == "k" or char == "l" or char == "m" or char == "n" or char == "o" or char == "p" or char == "q" or char == "r" or char == "s" or char == "t" or char == "u" or char == "v" or char == "w" or char == "x" or char == "y" or char == "z" or char == "*" or char == "^":
       return True
-  if "+" in userNum[1:-1] or userNum[-1] == "+" or "-" in userNum [1:-1] or userNum[-1] == "-" or userNum[0] == "/" or userNum[-1] == "/":
+  if "+" in userNum[1:-1] or userNum[-1] == "+" or "-" in userNum [1:-1] or userNum[-1] == "-" or userNum[0] == "/" or userNum[-1] == "/" or userNum.count("/") > 1:
     return True
 
 print("Welcome to the Number Type Classifier!")
