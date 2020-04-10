@@ -26,7 +26,7 @@ print("Welcome to the Number Type Classifier!")
 print("You can classify decimals, fractions, integers, π, e and i.")
 userNum = input("Type what you would like to classify: ")
 
-# check for invalid characters in input
+# keep looping until there are no invalid characters in input
 while letterInUserNum(userNum):
   userNum = input("Type what you would like to classify: ")
     
